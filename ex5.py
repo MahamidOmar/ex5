@@ -14,7 +14,9 @@ def names_of_registered_students(input_json_path, course_name):
     """
     pass
 
-
+"""
+hello
+"""
 def enrollment_numbers(input_json_path, output_file_path):
     """
     This function writes all the course names and the number of enrolled
