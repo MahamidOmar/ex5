@@ -35,6 +35,29 @@ def enrollment_numbers(input_json_path, output_file_path):
     :param input_json_path: Path of the students database json file.
     :param output_file_path: Path of the output text file.
     """
+
+    out = open(output_file_path, 'w')
+
+    required_courses = {}
+
+    with open(input_json_path, 'r') as input_file:
+        loaded_students = json.load(input_file)
+
+    for student_info in loaded_students.values():
+        tmp_courses = student_info["registered_courses"]
+        for course in tmp_courses:
+            if course in required_courses:
+                required_courses[course] += 1
+            else:
+                required_courses[course] = 1
+
+    for name, counter in sorted(required_courses.items()):
+        out.write('"')
+        out.write(name)
+        out.write('" ')
+        out.write(counter)
+        out.write('\n')
+
     pass
 
 def courses_for_lecturers(json_directory_path, output_json_path):
