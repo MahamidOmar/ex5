@@ -81,7 +81,8 @@ def courses_for_lecturers(json_directory_path, output_json_path):
 
         #check if file is json type
         if suffix == ".json" :
-            with open(file, 'r') as input_file:
+            file_path = os.path.join(json_directory_path, file)
+            with open(file_path, 'r') as input_file:
                 loaded_courses = json.load(input_file)
 
             #The dict of the course number
