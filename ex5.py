@@ -56,7 +56,7 @@ def enrollment_numbers(input_json_path, output_file_path):
         out.write(name)
         out.write('"')
         out.write(' ')
-        out.write(counter)
+        out.write(str(counter))
         out.write('\n')
 
     out.close()
