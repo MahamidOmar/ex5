@@ -54,7 +54,8 @@ def enrollment_numbers(input_json_path, output_file_path):
     for name, counter in sorted(required_courses.items()):
         out.write('"')
         out.write(name)
-        out.write('" ')
+        out.write('"')
+        out.write(' ')
         out.write(counter)
         out.write('\n')
 
