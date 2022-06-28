@@ -77,7 +77,7 @@ def courses_for_lecturers(json_directory_path, output_json_path):
     #opening files in directory
     for file in files:
         split_path = os.path.splitext(file)
-        suffix = split_path[2]
+        suffix = split_path[1]
 
         #check if file is json type
         if suffix == ".json" :
