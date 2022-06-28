@@ -58,6 +58,7 @@ def enrollment_numbers(input_json_path, output_file_path):
         out.write(counter)
         out.write('\n')
 
+    out.close()
     pass
 
 def courses_for_lecturers(json_directory_path, output_json_path):
